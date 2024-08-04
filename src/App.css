@@ -1,0 +1,102 @@
+/* Basic resets */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Arial', sans-serif;
+  background-color: white;
+  color: black;
+}
+
+/* Container for the app */
+.container {
+  width: 80vw;
+  max-width: 500px;
+  background: white;
+  padding: 4vw;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Form styling */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 2vh; /* Increased gap for better spacing */
+}
+
+input[type="text"], input[type="number"], button {
+  padding: 1.5vh 1vw;
+  margin-bottom: 1vh; /* Added margin for better spacing */
+  font-size: 1.5vh;
+  border: 2px solid black;
+  border-radius: 5px;
+  background: white;
+  color: black;
+}
+
+button {
+  padding: 1.5vh 1vw;
+  font-size: 2vh;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: #333;
+}
+
+/* List styling */
+ul {
+  list-style-type: none;
+}
+
+li {
+  background: white;
+  color: black;
+  border: 1px solid black;
+  margin-top: 2vh;
+  padding: 1.5vh 1vw;
+  border-radius: 5px;
+}
+
+/* Titles and Headings */
+h1, h2 {
+  margin-top: 4vh; /* Increased margin-top for headings */
+  margin-bottom: 4vh; /* Increased margin-bottom for headings */
+}
+
+/* Summary section */
+.summary {
+  text-align: center;
+  margin-top: 4vh;
+}
+
+.summary h2 {
+  margin: 4vh 0; /* Increased vertical margin for summary headings */
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .container {
+      width: 90vw;
+      padding: 5vw;
+  }
+
+  input[type="text"], input[type="number"], button {
+      font-size: 2vh;
+  }
+}
