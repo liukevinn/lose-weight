@@ -1,15 +1,16 @@
-// FoodItemForm.jsx
 import React, { useState } from 'react';
 
-export default function FoodItemForm({ addFoodItem }) {
+function FoodItemForm({ addFoodItem }) {
   const [foodTitle, setFoodTitle] = useState('');
   const [calorieCount, setCalorieCount] = useState('');
+  const [proteinContent, setProteinContent] = useState('');  // New state for protein content
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    addFoodItem(foodTitle, parseInt(calorieCount));
+    addFoodItem(foodTitle, parseInt(calorieCount), parseInt(proteinContent)); // Pass protein content as well
     setFoodTitle('');
     setCalorieCount('');
+    setProteinContent('');
   };
 
   return (
@@ -28,7 +29,16 @@ export default function FoodItemForm({ addFoodItem }) {
         onChange={(e) => setCalorieCount(e.target.value)}
         required
       />
+      <input
+        type="number"
+        placeholder="Protein (grams)"
+        value={proteinContent}
+        onChange={(e) => setProteinContent(e.target.value)}
+        required
+      />
       <button type="submit">Add Food Item</button>
     </form>
   );
 }
+
+export default FoodItemForm;
